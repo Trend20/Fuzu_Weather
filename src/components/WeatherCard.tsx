@@ -1,9 +1,14 @@
 import {FC} from "react";
 
-const WeatherCard: FC = ({info, language}: any) => {
+interface WeatherCardProps {
+    info:any;
+    language: string;
+}
+
+const WeatherCard:FC<WeatherCardProps> = ({info, language}) => {
     return(
         <div>
-            <h2>{info.location}</h2>
+            <h2>{info.name}</h2>
             <p>{info.temperature}</p>
         </div>
     )

@@ -13,7 +13,3 @@
   "theme_color": "#000000",
   "background_color": "#ffffff"
 }
-
-#OPENWEATHER_API_KEY='c18b30aca4a8b2778f8554594befeb39';
-#CITY_NAME='Nairobi';
-REACT_APP_BASE_URL='https://api.openweathermap.org/data/2.5/weather?q=Nairobi&appid=c18b30aca4a8b2778f8554594befeb39&units=metric'

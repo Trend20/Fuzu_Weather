@@ -1,6 +1,6 @@
 import {FC, useEffect, useState} from "react";
 import axios from "axios";
-const baseUrl = process.env.REACT_APP_BASE_URL;
+const baseUrl: any = process.env.REACT_APP_BASE_URL;
 
 const Dashboard:FC = () => {
     const[weatherInfo, setWeatherInfo] = useState(null)
@@ -22,7 +22,6 @@ const Dashboard:FC = () => {
 
     const handleLanguageChange = (selectedLanguage: string) => {
         setLanguage(selectedLanguage);
-        // Logic to switch language
     };
     return(
         <div>Dashboard</div>

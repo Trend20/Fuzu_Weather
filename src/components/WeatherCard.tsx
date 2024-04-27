@@ -13,9 +13,9 @@ const WeatherCard:FC = () => {
     const {main, wind, clouds} = weatherInfo;
     return (
         <div className="flex flex-col items-center space-y-4">
-            <div className="text-sm font-medium">{weatherInfo.name}</div>
+            <h3 className="text-xl font-semibold">{weatherInfo.name}</h3>
             <div className="text-8xl font-bold">{main.temp}°C</div>
-            <div className="grid grid-cols-3 gap-5">
+            <div className="flex justify-center items-center py-4">
                 {
                     weatherInfo.weather.map((item:any) =>(
                         <WeatherItem key={item.id} item={item} />

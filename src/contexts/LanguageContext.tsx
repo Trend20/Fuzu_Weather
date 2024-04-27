@@ -13,7 +13,7 @@ export const LanguageProvider: FC<LangProps> = ({children}) => {
         setLocale(prevLocale => (prevLocale === 'en' ? 'sw' : 'en'));
     };
     return(
-        <LanguageContext.Provider value={{ locale, toggleLocale }}>
+        <LanguageContext.Provider value={{ locale, setLocale }}>
             {children}
         </LanguageContext.Provider>
     )

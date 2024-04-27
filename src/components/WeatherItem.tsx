@@ -8,11 +8,15 @@ interface WeatherItemProps {
 const WeatherItem:FC<WeatherItemProps> = ({item}) =>{
     return (
         <div className="flex items-center space-x-4 flex-col">
-            <span>
+            <span className='flex items-center space-x-3'>
                 <IoCloudy className="h-12 w-12"/>
-                <p className="text-2xl font-medium">{item.main}</p>
+                <p className="text-2xl font-medium">
+                    {item.main}
+                </p>
             </span>
-            <p className="text-sm font-medium">{item.description}</p>
+            <p className="text-lg text-whiten font-medium capitalize">
+                {item.description}
+            </p>
         </div>
     )
 }

@@ -15,7 +15,7 @@ const App = () => {
   return (
       <IntlProvider messages={{}} locale="en" defaultLocale="en">
           <ThemeProvider>
-              <div className={`min-h-screen justify-center items-center relative text-white ${theme === 'dark' ? 'bg-black-2' : 'bg-gradient-to-br from-blue-500 to-indigo-500'}`}>
+              <div className={`min-h-screen justify-center items-center relative text-white ${theme === 'light' ? 'bg-black-2' : 'bg-gradient-to-br from-blue-500 to-indigo-500'}`}>
                   <LanguageProvider>
                       <WeatherProvider>
                           <ThemeSwitcher />

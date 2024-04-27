@@ -1,4 +1,7 @@
 {
-  "greeting": "Habari, dunia!",
-  "welcome": "Karibu kwenye programu yangu!"
+  "Label": "Chagua lugha",
+  "weather": {
+    "main": "Joto",
+    "description": "Maelezo ya Hali ya Hewa"
+  }
 }

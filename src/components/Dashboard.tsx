@@ -5,7 +5,7 @@ import { CiCalendarDate } from "react-icons/ci";
 import {WeatherContext} from "../contexts/WeatherContext";
 
 const Dashboard:FC = () => {
-    const[weatherInfo] = useContext(WeatherContext)
+    const[weatherInfo] = useContext(WeatherContext);
     return (
         <div
             className="flex flex-col min-h-screen items-center justify-center text-white">

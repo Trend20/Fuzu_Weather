@@ -1,33 +1,39 @@
-import {FC} from "react";
-import { IoMdSunny } from "react-icons/io";
+import {FC, useContext} from "react";
 import { FaWind } from "react-icons/fa";
 import { FaThermometerEmpty } from "react-icons/fa";
 import { FaCloudShowersHeavy } from "react-icons/fa";
+import {WeatherContext} from "../contexts/WeatherContext";
+import WeatherItem from "./WeatherItem";
 
-interface WeatherCardProps {
-    info:any;
-    language: string;
-}
-const WeatherCard:FC<WeatherCardProps> = ({info, language}) => {
+const WeatherCard:FC = () => {
+    const [weatherInfo] = useContext(WeatherContext);
+    if (!weatherInfo || Object.keys(weatherInfo).length === 0) {
+        return <div className="loader">Loading...</div>;
+    }
+    const {main, wind, clouds} = weatherInfo;
     return (
         <div className="flex flex-col items-center space-y-4">
-            <div className="text-8xl font-bold">{info.main.temp}°C</div>
-            <div className="flex items-center space-x-4">
-                <IoMdSunny className="h-12 w-12"/>
-                <div className="text-2xl font-medium">Sunny</div>
+            <div className="text-sm font-medium">{weatherInfo.name}</div>
+            <div className="text-8xl font-bold">{main.temp}°C</div>
+            <div className="grid grid-cols-3 gap-5">
+                {
+                    weatherInfo.weather.map((item:any) =>(
+                        <WeatherItem key={item.id} item={item} />
+                    ))
+                }
             </div>
             <div className="grid grid-cols-3 gap-4 text-sm font-medium">
                 <div className="flex items-center space-x-2">
                     <FaWind className="h-5 w-5"/>
-                    <span>{info.wind.speed} km/h</span>
+                    <span>{wind.speed} km/h</span>
                 </div>
                 <div className="flex items-center space-x-2">
                     <FaThermometerEmpty className="h-5 w-5"/>
-                    <span>{info.main.temp}%</span>
+                    <span>{main.temp}%</span>
                 </div>
                 <div className="flex items-center space-x-2">
                     <FaCloudShowersHeavy className="h-5 w-5"/>
-                    <span>{info.clouds.all}%</span>
+                    <span>{clouds.all}%</span>
                 </div>
             </div>
         </div>

@@ -1,12 +1,12 @@
 import React, {useContext} from 'react';
 import './App.css';
-import Dashboard from "./components/Dashboard";
+import Dashboard from "./components/dashboard/Dashboard";
 import {WeatherProvider} from "./contexts/WeatherContext";
 import {LanguageProvider} from "./contexts/LanguageContext";
 import { IntlProvider } from "react-intl";
 import {LanguageContext} from "./contexts/LanguageContext";
 import {ThemeContext, ThemeProvider} from "./contexts/ThemeContext";
-import ThemeSwitcher from "./components/ThemeSwitcher";
+import ThemeSwitcher from "./components/themeswitch/ThemeSwitcher";
 
 
 const App = () => {

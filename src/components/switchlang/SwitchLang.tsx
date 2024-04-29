@@ -1,6 +1,6 @@
 import {FC, useContext} from "react";
 import { TfiWorld } from "react-icons/tfi";
-import {LanguageContext} from "../contexts/LanguageContext";
+import {LanguageContext} from "../../contexts/LanguageContext";
 
 const SwitchLang:FC = () => {
     const {locale, setLocale} = useContext(LanguageContext)

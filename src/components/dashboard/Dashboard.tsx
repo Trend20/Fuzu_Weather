@@ -1,8 +1,8 @@
 import {FC, useContext} from "react";
-import SwitchLang from "./SwitchLang";
-import WeatherCard from "./WeatherCard";
+import SwitchLang from "../switchlang/SwitchLang";
+import WeatherCard from "../weathercard/WeatherCard";
 import { CiCalendarDate } from "react-icons/ci";
-import {WeatherContext} from "../contexts/WeatherContext";
+import {WeatherContext} from "../../contexts/WeatherContext";
 
 const Dashboard:FC = () => {
     const[weatherInfo] = useContext(WeatherContext);

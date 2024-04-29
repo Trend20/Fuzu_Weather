@@ -1,6 +1,6 @@
 import {useContext} from "react";
 import { MdSunny, MdDarkMode } from "react-icons/md";
-import {ThemeContext} from "../contexts/ThemeContext";
+import {ThemeContext} from "../../contexts/ThemeContext";
 
 
 const ThemeSwitcher = () => {

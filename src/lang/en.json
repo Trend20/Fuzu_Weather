@@ -1,7 +1,4 @@
 {
-  "Label": "Select language",
-  "weather": {
-    "main": "Temperature",
+    "main": "Rainy",
     "description": "Weather Description"
-  }
 }
